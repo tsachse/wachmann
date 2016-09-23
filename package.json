@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/tsachse/wachmann/issues"
   },
-  "homepage": "https://github.com/tsachse/wachmann#readme"
+  "homepage": "https://github.com/tsachse/wachmann#readme",
+  "dependencies": {
+    "onoff": "^1.1.1"
+  }
 }
