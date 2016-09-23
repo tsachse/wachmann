@@ -28,11 +28,14 @@ sudo apt-get install git-core tmux mc htop vim zsh lsof
 == Als Nutzer sachse_t lokal ausführen
 
 -----
+git config --global user.email th.sachse@googlemail.com
+git config --global user.name "sachse_t"
+
 mkdir ~/.ssh
 mkdir ~/Code
 cd ~/Code
 git clone https://github.com/tsachse/wachmann
-i
+
 # vim
 cd
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
