@@ -18,7 +18,7 @@ schwarz::
 PIR-GND nach Pi Masse (GND pin)
 gelb::
 PIR-OUT nach Pi Pin 7 (GPIO 4)
-braun:
+braun::
 Flachband zur Kamera
 
 == Quellen
