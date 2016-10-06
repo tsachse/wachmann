@@ -3,9 +3,9 @@
 Das ist ein Raspberry-Pi-Projekt, dass mit einem Bewegungssensor und einem RPi-Kameramodul  Bilder macht 
 und mit der Telegramm-API verschickt.
 
-image::what-you-need-raspberry-pi.jpg
+image::what-you-need-raspberry-pi.jpg[]
 
-image::pi-pir-camera_bb.png
+image::pi-pir-camera_bb.png[]
 
 == Quellen
 
