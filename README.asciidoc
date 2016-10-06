@@ -16,9 +16,9 @@ rot::
 PIR-VCC nach Pi 5V pin
 schwarz::
 PIR-GND nach Pi Masse (GND pin)
-gelb::
+gelb/braun::
 PIR-OUT nach Pi Pin 7 (GPIO 4)
-braun::
+orange::
 Flachband zur Kamera
 
 == Quellen
