@@ -12,6 +12,13 @@ image::what-you-need-raspberry-pi.jpg[]
 
 image::pi-pir-camera_bb.png[]
 
+rot::
+PIR-VCC nach Pi 5V pin
+schwarz::
+PIR-GND nach Pi Masse (GND pin)
+gelbi/braun::
+PIR-OUT nach Pi Pin 7 (GPIO 4)
+
 == Quellen
 
 http://www.forum-raspberrypi.de/Thread-tutorial-bewegungserkennung-mit-dem-raspberry-camera-modul-und-motion +
