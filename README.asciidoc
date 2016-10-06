@@ -1,0 +1,13 @@
+= Wachmann
+
+Das ist ein Raspberry-Pi-Projekt, dass mit einem Bewegungssensor und einem RPi-Kameramodul  Bilder macht 
+und mit der Telegramm-API verschickt.
+
+image::what-you-need-raspberry-pi.jpg
+
+image::pi-pir-camera_bb.png
+
+== Quellen
+
+http://www.forum-raspberrypi.de/Thread-tutorial-bewegungserkennung-mit-dem-raspberry-camera-modul-und-motion +
+http://www.girliemac.com/blog/2015/12/25/kittycam-raspberrypi-camera-cat-face-recog-nodejs/
