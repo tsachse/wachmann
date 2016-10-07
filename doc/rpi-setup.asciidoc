@@ -1,0 +1,75 @@
+== Als Root ausführen
+
+-----
+# aktuelle Distro
+sudo apt-get update
+
+# Zeroconnfig/Bonjour
+sudo apt-get install libnss-mdns
+
+# NTP Dienst installieren
+sudo apt-get install ntp
+
+# git installiern
+sudo apt-get install git
+
+# node.js installieren die Version aus Distro
+# sudo apt install -y nodejs npm
+# sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+# Nutzer anlegen
+sudo adduser sachse_t
+sudo echo 'sachse_t ALL=(ALL) NOPASSWD: ALL' >/etc/sudoers
+
+# IDE station
+sudo apt-get install git-core tmux mc htop vim zsh lsof
+-----
+
+== Als Nutzer sachse_t lokal ausführen
+
+-----
+mkdir ~/.ssh
+mkdir ~/Code
+cd ~/Code
+git clone https://github.com/tsachse/wachmann
+i
+# vim
+cd
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd ~/.vim/bundle
+git clone https://github.com/tikhomirov/vim-glsl
+git clone https://github.com/scrooloose/nerdtree.git
+curl -L http://install.ohmyz.sh | sh
+
+# node js
+cd
+wget https://nodejs.org/dist/v5.1.0/node-v5.1.0-linux-armv6l.tar.gz
+tar xvf node-v5.1.0-linux-armv6l.tar.gz
+rm node-v5.1.0-linux-armv6l.tar.gz
+export PATH=~/node-v5.1.0-linux-armv6l/bin:$PATH
+echo 'export PATH=~/node-v5.1.0-linux-armv6l/bin:$PATH' >>~/.profile
+
+-----
+
+.vimrc
+------
+execute pathogen#infect()
+filetype plugin on
+filetype indent on
+set number
+syntax on
+set autoindent
+set hlsearch
+------
+
+== Als Nutzer sachse_t remote ausführen
+
+-----
+cd ~/.ssh
+# die Portnummer entspricht dem SSH-Port der QEMU, 
+# natuerlich ggf. weglassen.
+scp -P 2232  id_rsa.pub localhost:~/.ssh/id_rsa.pub
+scp -P 2232  id_rsa.pub localhost:~/.ssh/id_rsa
+scp -P 2232  id_rsa.pub localhost:~/.ssh/authorized_keys
+-----
+
