@@ -1,4 +1,5 @@
 const PirSensor = require('./lib/pir-sensor-fake.js');
+// const PirSensor = require('./lib/pir-sensor.js');
 var TelegramBot = require('node-telegram-bot-api');
 
 if(process.argv.length < 3) {
