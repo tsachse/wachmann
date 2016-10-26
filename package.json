@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/tsachse/wachmann#readme",
   "dependencies": {
+    "node-telegram-bot-api": "^0.24.0",
     "onoff": "^1.1.1"
   }
 }
