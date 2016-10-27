@@ -1,3 +1,4 @@
+const spawn = require('child_process').spawn;
 const PirSensor = require('./lib/pir-sensor-fake.js');
 // const PirSensor = require('./lib/pir-sensor.js');
 var TelegramBot = require('node-telegram-bot-api');
@@ -22,7 +23,8 @@ var check_motion = true;
 pir.on('motion', function() {
   console.log('motion ...');
   if(check_motion) {
-    bot.sendMessage(para.chat_id,'motion ...');
+    //bot.sendMessage(para.chat_id,'motion ...');
+    send_img(para.chat_id);
   }
 });
 
@@ -45,3 +47,24 @@ bot.onText(/^Stop/, function (msg, match) {
   check_motion = false;
   bot.sendMessage(fromId, "Überwachung gestoppt ...");
 });
+
+bot.onText(/^Bild/, function (msg, match) {
+  var fromId = msg.from.id;
+  send_img(fromId);
+});
+
+var img_snap = false;
+var send_img = function (fromId) {
+  if(!img_snap) {
+    img_snap = true;
+    var foto = spawn('bash', ['./scripts/foto.sh']);
+    foto.stdout.pipe(process.stdout);
+    foto.on('close',function(){ 
+      var photo = 'img.gif';
+      bot.sendDocument(fromId, photo, {caption: 'Foto...'});
+      img_snap = false;
+      console.log('Foto...');
+    });
+  }
+
+};
