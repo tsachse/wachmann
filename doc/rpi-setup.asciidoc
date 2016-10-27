@@ -23,6 +23,8 @@ sudo echo 'sachse_t ALL=(ALL) NOPASSWD: ALL' >/etc/sudoers
 
 # IDE station
 sudo apt-get install git-core tmux mc htop vim zsh lsof
+
+sudo apt-get install imagemagick
 -----
 
 == Als Nutzer sachse_t lokal ausführen
