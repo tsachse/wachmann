@@ -15,6 +15,7 @@ sleep 5
 echo raspistill -w 640 -h 480 -tl 250 -t 5000 -o $photo_dir/img_%04d.jpg
 
 convert -delay 25 -loop 0 $photo_dir/img_*.jpg img.gif
+# convert -delay 25 -loop 0 -dither none -deconstruct -layers optimize -matte $photo_dir/img_*.jpg img.gif
 # convert -delay 25 -loop 0 $photo_dir/img_*.jpg $img
 # cp $img img.gif
 
