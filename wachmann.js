@@ -1,6 +1,6 @@
 const spawn = require('child_process').spawn;
-const PirSensor = require('./lib/pir-sensor-fake.js');
-// const PirSensor = require('./lib/pir-sensor.js');
+// const PirSensor = require('./lib/pir-sensor-fake.js');
+const PirSensor = require('./lib/pir-sensor.js');
 var TelegramBot = require('node-telegram-bot-api');
 
 if(process.argv.length < 3) {
@@ -17,8 +17,7 @@ console.log(para.chat_id);
 
 var bot = new TelegramBot(para.token, {polling: true});
 var pir = new PirSensor(17);
-var check_motion = true;
-
+var check_motion = false;
 
 pir.on('motion', function() {
   console.log('motion ...');
