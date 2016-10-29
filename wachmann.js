@@ -59,8 +59,8 @@ var send_img = function (fromId) {
     var foto = spawn('bash', ['./scripts/foto.sh']);
     foto.stdout.pipe(process.stdout);
     foto.on('close',function(){ 
-      var photo = 'img.gif';
-      bot.sendDocument(fromId, photo, {caption: 'Foto...'});
+      var photo = 'img.jpg';
+      bot.sendPhoto(fromId, photo, {caption: 'Foto...'});
       img_snap = false;
       console.log('Foto...');
     });
