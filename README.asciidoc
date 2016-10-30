@@ -24,4 +24,6 @@ Flachband zur Kamera
 == Quellen
 
 http://www.forum-raspberrypi.de/Thread-tutorial-bewegungserkennung-mit-dem-raspberry-camera-modul-und-motion +
-http://www.girliemac.com/blog/2015/12/25/kittycam-raspberrypi-camera-cat-face-recog-nodejs/
+http://www.girliemac.com/blog/2015/12/25/kittycam-raspberrypi-camera-cat-face-recog-nodejs/ +
+http://www.netzmafia.de/skripten/hardware/RasPi/RasPi_Kamera.html +
+http://www.netzmafia.de/skripten/hardware/RasPi/RasPi_GPIO_Shell.html +
